@@ -1,0 +1,37 @@
+'''
+input
+'''
+i=input("enter the string:")
+print(i)
+i=int(input("enter the value:"))
+print(i)
+p=float(input("enter the value:"))
+print(p)
+l=input("enter the values:").split()
+print(l)
+l=input("enter the values:").split(",")
+print(l)
+s=list(map(int,input("enter the values").split()))
+print(s)
+s=list(map(float,input("enter the values").split()))
+print(s)
+s=list(map(tuple,input("enter the values").split()))
+print(s)
+s=list(map(set,input("enter the values").split()))
+print(s)
+s=tuple(map(int,input("enter the values").split()))
+print(s)
+s=tuple(map(float,input("enter the values").split()))
+print(s)
+s=tuple(map(list,input("enter the values").split()))
+print(s)
+p=set(map(int,input("Enter selected image IDs:").split()))
+print(p)
+p=eval(input("values:"))
+print(p)
+'''
+multiple packing & unpacking
+'''
+username, email = input("Enter username and password:").split()
+print("Username:", username)
+print("email:", email)
