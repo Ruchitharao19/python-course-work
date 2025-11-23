@@ -11,7 +11,7 @@ if network:
         if stocks[index]==0:
             print(f"{product}-out of stock")
         elif 1<=stocks[index]<=10:
-            print(f"{poduct}-only few items left.hurry up")
+            print(f"{product}-only few items left.hurry up")
         else:
             print(f"{product}")
     else:
