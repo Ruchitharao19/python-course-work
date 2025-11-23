@@ -12,3 +12,4 @@ i=0
 while i<len(l):
     print(i)
     i+=1
+
