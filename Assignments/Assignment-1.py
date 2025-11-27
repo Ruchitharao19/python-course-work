@@ -1,33 +1,43 @@
-print("Welcome! to NYKAA")
-print("---------------------------")
-Product_brand = input("Enter Nykaa product brand: ")
-Product_name = input("Enter Nykaa product name: ")
-Product_price = float(input("Enter Nykaa product price: "))
-Product_quantity = int(input("Enter Nykaa product quantity: "))
-Product_discount_percentage = float(input("Enter Nykaa product discount percentage: "))
-Product_description = input("Enter Nykaa product description: ")
+print("Welcome to Nykaa!")
+print("--------------------")
+product_id = int(input("Enter Product ID: "))
+product_name = input("Enter Product Name: ")
+product_price = float(input("Enter Price: "))
+stock_details = tuple(input("Enter Stock Details (available,sold): ").split(","))
+discount_percentage = float(input("Enter Discount Percentage: "))
+product_features = set(input("Enter Product Features: ").split(","))
+supplier_name = input("Enter Supplier Name: ")
+supplier_contact = input("Enter Supplier Contact Number: ")
+supplier_location = input("Enter Supplier Location: ")
+
+# Create supplier details dictionary
+supplier_details = {
+    "Name": supplier_name,
+    "Contact": supplier_contact,
+    "Location": supplier_location
+}
+
+# Calculate available stock
+available_stock = int(stock_details[0])
 
 # Calculate discounted price
-discounted_price = Product_price - (Product_price * Product_discount_percentage / 100)
+discounted_price = product_price - (product_price * discount_percentage / 100)
 
-# Display Nykaa product information using different string formatting methods
-print("\nNykaa Product Information:")
-print("---------------------------")
+# Display product details using different formatting methods
+print("\nProduct Information:")
+print("--------------------")
 
-# Using comma separation
-print("Product Name:", Product_name, "\tPrice:", Product_price, "\tQuantity:", Product_quantity)
+# Using Comma Separation (sep=',')
+print("Product ID:",product_id , "\tName:",product_name,"\tPrice:",product_price, sep=',')
+print(f"Stock Available: {available_stock} units")
+print("Product Features:", product_features)
+# Using Percentage Formatting (% operator)
+print("Product Discount: %.2f%%" % discount_percentage)
 
-# Using percentage formatting
-print("Discount: %.2f" % Product_discount_percentage)
-
-# Using f-strings (Python 3.6+)
-print(f"Discounted Price: ₹{discounted_price:.2f}")
+# Using f-strings (f"")
+print(f"discounted_price:{discounted_price}")
 
 # Using .format() method
-print("Description: {}".format(Product_description))
-
-# Using f-strings with multiple values
-print(f"Product: {Product_name}, Price: ₹{Product_price:.2f}, Quantity: {Product_quantity}, Discounted Price: ₹{discounted_price:.2f}")
-
-print("Your order is confirmed")
-
+print("Supplier Details - Name : {}, Contact : {}, Location : {}".format(supplier_details["Name"], supplier_details["Contact"], supplier_details["Location"]))
+print("product delivered")
+print("--------------------------")
