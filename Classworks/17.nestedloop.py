@@ -82,7 +82,7 @@ for i in range(n):
             print(1,end=" ")
     print()
 
-'''
+
 n=int(input())
 for i in range(n):
     for j in range(n):
@@ -90,5 +90,29 @@ for i in range(n):
             print("*",end=" ")
         else:
             print(" ",end=" ")
-        
-'''
+    print()   
+#list inside list
+l=[[1,2,3],[4,5,6],[7,8]]
+for i in l:
+    for j in i:
+        print(j)
+l=[[1,2,3],[4,5,6],[7,8]]
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        print(l[i][j])
+#tuple inside tuple(nestedtuple)
+t=((1,2),(3,4),(5,6))
+for i in t:
+    for j in i:
+        print(i,j)
+#nested dictionary
+data={
+    'apple':{'price':50,'discount':5},
+    'mango':{'price':100,'discount':10},
+    'papaya':{'price':150,'discount':7},
+    'banana':{'price':30,'discount':0},
+    }
+for i in data:
+    for j in data[i]:
+        print(i,j,data[i][j])
+
