@@ -76,20 +76,42 @@ def outer():
 outer()
 
 #recursion
-
+#factorial of a number
+def fact(n):
+    if n == 0 or n==1:
+        return 1
+    else:
+        return n * fact(n-1)
+print(fact(5))
+#fibonacci series
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+print(fib(6))
+    
 def shoot(bullets):
     if bullets<=0:
         print("game over")
         return
-    print(f"{bullets} bullets left")
+        print(f"{bullets} bullets left")
     shoot(bullets-1)
 shoot(10)
-'''
-def display(n,i):
-    if i>len(n):
-        print("Exit")
-        return
-    print(n[i])
-    display(n+1)
-display(n)
-'''
+
+#Pass by Value (Immutable Objects)
+def modify_value(num):
+    num += 10 
+    print("Inside function:", num)
+x = 5
+modify_value(x)
+print("Outside function:", x)
+
+#Pass by Reference def modify_value(num):
+def modify_list(lst):
+    lst.append(4) # Modifies the original list
+numbers = [1, 2, 3]
+modify_list(numbers)
+print(numbers)
