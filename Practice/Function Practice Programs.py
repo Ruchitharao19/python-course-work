@@ -1,4 +1,4 @@
-#1
+'''#1
 def addition(a,b):
     return a+b
 num1=int(input())
@@ -23,10 +23,27 @@ print(greet(name))
 #5
 def con(c):
     return (c*9/5)+32
-    print(f"Temperature in Fahrenheit:{f}")
+    print(f"Temp
+    erature in Fahrenheit:{f}")
 c=float(input("Enter temperature in Celsius:"))
 f=con(c)
 print(f)
+#6
+def mul(a,b,c):
+    return a*b*c
+a=int(input())
+b=int(input())
+c=int(input())
+print(mul(a,b,c))
+#7
+def simple_interest(p,t,r):
+    si=(p*t*r)/100
+    return si
+p=float(input())
+t=float(input())
+r=float(input())
+print(simple_interest(p,t,r))
+#8
 def length(s):
     count=0
     for i in s:
@@ -35,11 +52,19 @@ def length(s):
 s="python"
 print(length(s))
 
+#9
 l=list(map(int,input().split()))
-double=list(map(lambda i:i+i,l))
+double=list(map(lambda x: l.append[5],[0]))
+print(double)              
+#10
+l=list(map(int,input().split()))
+double=list(map(lambda i:l+i,l))
+print(double)      
+'''
+#11
+l=list(map(int,input().split()))
+double=list(map(lambda i:sorted(l),l))
 print(double)
-            
-'''    
 def remove_ele(l,ele):
     l.remove(ele)
     return
