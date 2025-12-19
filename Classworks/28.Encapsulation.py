@@ -13,20 +13,12 @@ class Instagram:
         print("password updated")
     @property
     def viewPost(self):
-        return self.__post
-    @viewPost.setter
-    def viewPost(self, post):
-        self.__post.append(post)
+        return self._post
 ruchitha=Instagram("ruchitha","123")
 print(f"before:{ruchitha.username}")
 ruchitha.username="ruchi"
 print(f"after:{ruchitha.username}")
-
 print(f"before:{ruchitha.getpassword()}")
 ruchitha.setpassword("ruchi")
-print(f"after:{ruchitha.getpassword()}")
-
-print(ruchitha.viewPost)
-ruchitha.viewPost = "hello"
-ruchitha.viewPost = "first reel"
+print(f"after:{ruchitha.getpassword()}")              
 print(ruchitha.viewPost)
