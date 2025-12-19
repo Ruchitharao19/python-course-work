@@ -10,3 +10,5 @@ class Instagram:
         print(f"Username:{self.password}")
 ruchitha=Instagram("ruchitha","123")
 
+
+
