@@ -186,4 +186,30 @@ varsha.ai()
 varsha.generateimages()
 varsha.human_emotions()
 varsha.technical()
+
+# when the parent class and child class has same methods. To access same methods
+#super method
+class whatsapp_v1:
+    def sendpics(self):
+        print("you can send pics")
+class whatsapp_v2(whatsapp_v1):
+    def sendpics(self):
+        super().sendpics()
+        print("you can like pics")
+ruchitha=whatsapp_v2()
+ruchitha.sendpics()
+
+class whatsapp_v1:
+    def sendpics(self):
+        print("you can send pics")
+class whatsapp_v2():
+    def sendpics(self):
+        print("you can like pics")
+class whatsapp_v3(whatsapp_v1,whatsapp_v2):
+    def sendpics(self):
+        whatsapp_v1.sendpics(self)
+        whatsapp_v2.sendpics(self)
+        print("you can add music")      
+ruchitha=whatsapp_v3()
+ruchitha.sendpics()
         

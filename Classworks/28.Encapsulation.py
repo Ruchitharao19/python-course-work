@@ -14,11 +14,19 @@ class Instagram:
     @property
     def viewPost(self):
         return self._post
+    @viewPost.setter
+    def viewPost(self,post):
+        self._post.append(post)
 ruchitha=Instagram("ruchitha","123")
 print(f"before:{ruchitha.username}")
 ruchitha.username="ruchi"
 print(f"after:{ruchitha.username}")
+
 print(f"before:{ruchitha.getpassword()}")
 ruchitha.setpassword("ruchi")
-print(f"after:{ruchitha.getpassword()}")              
+print(f"after:{ruchitha.getpassword()}")
+
+print(ruchitha.viewPost)
+ruchitha.viewPost = "hello"
+ruchitha.viewPost = "first reel"
 print(ruchitha.viewPost)
