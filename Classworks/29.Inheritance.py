@@ -199,6 +199,7 @@ class whatsapp_v2(whatsapp_v1):
 ruchitha=whatsapp_v2()
 ruchitha.sendpics()
 
+
 class whatsapp_v1:
     def sendpics(self):
         print("you can send pics")
