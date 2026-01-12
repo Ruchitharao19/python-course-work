@@ -15,7 +15,7 @@ if attach_choice == "y":
     files = input("Enter file paths separated by commas: ")
     attachments = [f.strip() for f in files.split(",")]
 
-if choice == "1":
+if choice == "1": 
     recipient = input("Enter recipient email: ")
     send_email(recipient, subject, body, attachments)
 
