@@ -14,7 +14,7 @@ SENDER_EMAIL = "polsaniruchitha@gmail.com"
 SENDER_PASSWORD = "rqes rzkq yrtc tizr"  
 
 def send_email(to_email, subject, body, attachments=None):
-    try:
+    try:   
         msg = MIMEMultipart()
         msg["From"] = SENDER_EMAIL
         msg["To"] = to_email
